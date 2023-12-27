@@ -122,7 +122,7 @@ namespace MagStackWeb.Areas.Customer.Controllers
             if (applicationUser.CompanyId.GetValueOrDefault() == 0)
             {
                 //stripe settings 
-                var domain = "https://localhost:44318/";
+                var domain = "http://prathamsavjani-001-site1.atempurl.com/";
                 var options = new SessionCreateOptions
                 {
                     PaymentMethodTypes = new List<string>
