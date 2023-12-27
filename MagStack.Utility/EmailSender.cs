@@ -23,7 +23,7 @@ namespace MagStack.Utility
             using (var emailClient = new SmtpClient())
             {
                 emailClient.Connect("smtp.gmail.com", 587, MailKit.Security.SecureSocketOptions.StartTls);
-                emailClient.Authenticate("prathamsavjani99@gmail.com", "trknbqgnrahdnskw");
+                emailClient.Authenticate("prathamsavjani99@gmail.com", "joqdqmawrelzpgjj");
                 emailClient.Send(emailToSend);
                 emailClient.Disconnect(true);
             }
