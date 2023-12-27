@@ -1,0 +1,266 @@
+﻿<div class="row ">
+    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+        <div class="card">
+            <div class="card-statistic-4">
+                <div class="align-items-center justify-content-between">
+                    <div class="row ">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
+                            <div class="card-content">
+                                <h5 class="font-15">Total Users</h5>
+                                <h2 class="mb-3 font-18">@ViewBag.TotalUsers</h2>
+                                <p class="mb-0"><span class="col-green">10%</span> Increase</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
+                            <div class="banner-img">
+                                <img src="~/img/banner/1.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+        <div class="card">
+            <div class="card-statistic-4">
+                <div class="align-items-center justify-content-between">
+                    <div class="row ">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
+                            <div class="card-content">
+                                <h5 class="font-15">Companies</h5>
+                                <h2 class="mb-3 font-18">@ViewBag.TotalCompany</h2>
+                                <p class="mb-0"><span class="col-orange">09%</span> Decrease</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
+                            <div class="banner-img">
+                                <img src="~/img/banner/2.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+        <div class="card">
+            <div class="card-statistic-4">
+                <div class="align-items-center justify-content-between">
+                    <div class="row ">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
+                            <div class="card-content">
+                                <h5 class="font-15">Products</h5>
+                                <h2 class="mb-3 font-18">@ViewBag.TotalProduct</h2>
+                                <p class="mb-0">
+                                    <span class="col-green">18%</span>
+                                    Increase
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
+                            <div class="banner-img">
+                                <img src="~/img/banner/3.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+        <div class="card">
+            <div class="card-statistic-4">
+                <div class="align-items-center justify-content-between">
+                    <div class="row ">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
+                            <div class="card-content">
+                                <h5 class="font-15">Revenue</h5>
+                                <h2 class="mb-3 font-18">$@ViewBag.TotalRevenue</h2>
+                                <p class="mb-0"><span class="col-green">42%</span> Increase</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
+                            <div class="banner-img">
+                                <img src="~/img/banner/4.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12 col-sm-12 col-lg-12">
+        <div class="card ">
+            <div class="card-header">
+                <h4>Magazine Revenue Chart</h4>
+                <div class="card-header-action">
+                    <div class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="btn btn-warning dropdown-toggle">Options</a>
+                    </div>
+                    <a href="#" class="btn btn-primary">View All</a>
+                </div>
+            </div>
+            <div class="card-body">
+                <div id="chart4"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12 col-sm-12 col-lg-4">
+        <div class="card">
+            <div class="card-header">
+                <h4>Order Status</h4>
+            </div>
+            <div class="card-body">
+                <div id="chart_div2"></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-sm-12 col-lg-4">
+        <div class="card">
+            <div class="card-header">
+                <h4>Payment Status</h4>
+            </div>
+            <div class="card-body">
+                <div id="chart_div3"></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-sm-12 col-lg-4">
+        <div class="card">
+            <div class="card-header">
+                <h4>Sales</h4>
+            </div>
+            <div class="card-body">
+                <div id="chart_div1"></div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts{
+    @{
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+            google.charts.load('current', { 'packages': ['corechart'] });
+            google.charts.setOnLoadCallback(drawChart1);
+            google.charts.setOnLoadCallback(drawChart2);
+            google.charts.setOnLoadCallback(drawChart3);
+            google.charts.setOnLoadCallback(drawChart4);
+            function drawChart1() {
+                $.ajax({
+                    url: '/Admin/Dashboard/GetSalesByProduct',
+                    dataType: 'json',
+                    success: function (response) {
+                        var data = response.data;
+                        var chartData = [['Magazine', 'Count']];
+                        for (var i = 0; i < data.length; i++) {
+                            chartData.push([data[i].title, data[i].count]);
+                        }
+                        var options = {
+                            hAxis: { title: 'Magazine', titleTextStyle: { color: '#333' } },
+                            vAxis: { title: 'Sold', minValue: 0 },
+                            legend: { position: 'none' },
+                            height: 250,
+                            areaOpacity: 0.7
+                        };
+                        var chart = new google.visualization.AreaChart(document.getElementById('chart_div1'));
+                        chart.draw(google.visualization.arrayToDataTable(chartData), options);
+                    }
+                });
+            }
+
+            function drawChart2() {
+                $.ajax({
+                    url: '/Admin/Dashboard/GetTotalOrderStatus',
+                    dataType: 'json',
+                    success: function (data) {
+                        var chartData = new google.visualization.DataTable();
+                        chartData.addColumn('string', 'Order Status');
+                        chartData.addColumn('number', 'Count');
+                        $.each(data.data, function (i, g) {
+                            chartData.addRow([g.orderStatus, g.count]);
+                        });
+
+                        var chart = new google.visualization.AreaChart(document.getElementById('chart_div2'));
+
+                        var options = {
+                            hAxis: { title: 'Order Status', titleTextStyle: { color: '#333' } },
+                            vAxis: { title: 'Total', minValue: 0 },
+                            legend: { position: 'none' },
+                            colors: ['#FFA500'],
+                            height: 250
+                        };
+                        chart.draw(chartData, options);
+                    }
+                });
+            }
+
+            function drawChart3() {
+                $.ajax({
+                    url: '/Admin/Dashboard/GetTotalPaymentStatus',
+                    dataType: 'json',
+                    success: function (data) {
+                        var chartData = new google.visualization.DataTable();
+                        chartData.addColumn('string', 'Payment Status');
+                        chartData.addColumn('number', 'Count');
+                        $.each(data.data, function (i, g) {
+                            chartData.addRow([g.paymentStatus, g.count]);
+                        });
+
+                        var chart = new google.visualization.AreaChart(document.getElementById('chart_div3'));
+
+                        var options = {
+                            hAxis: {
+                                title: 'Payment Status',
+                                titleTextStyle: {
+                                    color: '#333'
+                                }
+                            },
+                            vAxis: {
+                                title: 'Total',
+                                minValue: 0
+                            },
+                            legend: {
+                                position: 'none'
+                            },
+                            colors: ['#00FF00'],
+                            height: 250
+                        };
+                        chart.draw(chartData, options);
+                    }
+                });
+            }
+
+            function drawChart4() {
+                $.ajax({
+                    url: '/Admin/Dashboard/GetProductRevenue',
+                    dataType: 'json',
+                    success: function (data) {
+                        var chartData = new google.visualization.DataTable();
+                        chartData.addColumn('string', 'Magazines');
+                        chartData.addColumn('number', 'Revenue');
+                        $.each(data, function (i, g) {
+                            chartData.addRow([g.productName, g.total]);
+                        });
+
+                        var chart = new google.visualization.AreaChart(document.getElementById('chart4'));
+
+                        var options = {
+                            hAxis: { title: 'Magazines', titleTextStyle: { color: '#333' } },
+                            vAxis: { title: 'Revenue', minValue: 0 },
+                            colors: ['#d234eb'],
+                            height: 300
+                        };
+                        chart.draw(chartData, options);
+                    }
+                });
+            }
+
+
+        </script>
+    }
+    }

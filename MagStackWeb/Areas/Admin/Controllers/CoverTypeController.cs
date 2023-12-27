@@ -3,10 +3,13 @@ using MagStack.DataAccess.Repository.IRepository;
 using MagStack.Models;
 using MagStack.DataAccess.Repository;
 using Microsoft.AspNetCore.Mvc;
+using MagStack.Utility;
+using Microsoft.AspNetCore.Authorization;
 
 namespace MagStackWeb.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = SD.Role_Admin)]
     public class CoverTypeController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;

@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MagStack.Models\MagStack.Models.csproj" />
+    <ProjectReference Include="..\MagStack.Utility\MagStack.Utility.csproj" />
   </ItemGroup>
 
 </Project>

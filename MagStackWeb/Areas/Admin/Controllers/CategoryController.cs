@@ -3,10 +3,13 @@ using MagStack.DataAccess.Repository.IRepository;
 using MagStack.Models;
 using MagStack.DataAccess.Repository;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
+using MagStack.Utility;
 
 namespace MagStackWeb.Areas.Admin.Controllers
 {
 [Area("Admin")]
+[Authorize(Roles = SD.Role_Admin)]
     public class CategoryController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
